@@ -1,12 +1,12 @@
 # Three Connect Game
 
+🎮LIVE DEMO: 
+https://hyunjungjeinlim.github.io/ConnectThree/
+
 🖼️ preview images of the game
 
-![Start Screen](Capture/1.png)
+![Screen](Capture/preview image.png)
 
-![Gameplay](Capture/2.png)
-
-![Win Animation](Capture/3.png)
 
 📋 Description
 
