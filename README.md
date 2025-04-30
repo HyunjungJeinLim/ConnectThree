@@ -5,7 +5,7 @@ https://hyunjungjeinlim.github.io/ConnectThree/
 
 🖼️ preview images of the game
 
-![Screen](Capture/preview image.png)
+![Screen](Capture/PreviewImage.png)
 
 
 📋 Description
