@@ -46,17 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (checkWin(row, col)) {
           setTimeout(() => {
-            alert(`🎉 Player ${currentPlayer} wins!`);
-            resetGame();
-          }, 200);
+            showWinner(currentPlayer);
+          }, 300);
           return;
         }
 
         if (gameBoard.flat().every(cell => cell !== null)) {
           setTimeout(() => {
-            alert("It's a draw!");
-            resetGame();
-          }, 200);
+            showWinner('Nobody');
+          }, 300);
           return;
         }
 
@@ -99,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
       cell.classList.add('win-blink');
     });
   }
-  
 
   function countDirection(row, col, dx, dy) {
     let r = row + dx, c = col + dy, count = 0;
@@ -131,5 +128,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     currentPlayer = 'X';
     playing.textContent = currentPlayer;
+  };
+
+  function showWinner(player) {
+    const winnerText = player === 'Nobody' ? "It's a draw!" : `🎉 Player ${player} wins!`;
+    document.getElementById('winnerText').textContent = winnerText;
+    document.getElementById('winModal').classList.remove('hidden');
+  }
+
+  window.closeModal = function () {
+    document.getElementById('winModal').classList.add('hidden');
+    resetGame();
   };
 });
